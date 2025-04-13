@@ -1,0 +1,279 @@
+
+const mockTutors = [
+    {
+      "id": 1,
+      "name": "김민지",
+      "skills": ["Java", "Next.js", "JavaScript"],
+      "year": "7",
+      "career": "김민지 - 7년차 개발자, 다양한 회사에서 근무 경험 보유",
+      "availableTime": "평일 야간",
+      "education": ["2022 튜터 활동", "2020 교육 참가"],
+      "contracts": []
+    },
+    {
+      "id": 2,
+      "name": "김민지",
+      "skills": ["Next.js", "JavaScript", "CSS"],
+      "year": "8",
+      "career": "박지훈 - 8년차 개발자, 다양한 회사에서 근무 경험 보유",
+      "availableTime": "평일 오전",
+      "education": ["2022 튜터 활동", "2022 교육 참가"],
+      "contracts": [
+        {
+          "title": "박지훈 프로젝트 1",
+          "startDate": "2021-05-01",
+          "endDate": "2024-11-28",
+          "team": "C팀",
+          "recommendation": "보통"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "이수민",
+      "skills": ["HTML", "React", "Next.js", "JavaScript"],
+      "year": "6",
+      "career": "이수민 - 6년차 개발자, 다양한 회사에서 근무 경험 보유",
+      "availableTime": "주말 오후",
+      "education": [],
+      "contracts": []
+    },
+    {
+      "id": 4,
+      "name": "정윤호",
+      "skills": ["HTML", "JavaScript", "Java", "Next.js"],
+      "year": "7",
+      "career": "정윤호 - 7년차 개발자, 다양한 회사에서 근무 경험 보유",
+      "availableTime": "주말 오후",
+      "education": ["2022 튜터 활동", "2024 교육 참가"],
+      "contracts": [
+        {
+          "title": "정윤호 프로젝트 1",
+          "startDate": "2020-07-01",
+          "endDate": "2023-11-28",
+          "team": "디자인팀",
+          "recommendation": "보통"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "한지은",
+      "skills": ["CSS", "HTML", "Vue", "Angular"],
+      "year": "1",
+      "career": "한지은 - 1년차 개발자, 다양한 회사에서 근무 경험 보유",
+      "availableTime": "평일 야간",
+      "education": [],
+      "contracts": []
+    },
+    {
+      "id": 6,
+      "name": "최다인",
+      "skills": ["CSS", "React", "HTML", "Vue"],
+      "year": "4",
+      "career": "최다인 - 4년차 개발자, 다양한 회사에서 근무 경험 보유",
+      "availableTime": "상시 가능",
+      "education": ["2022 튜터 활동", "2020 교육 참가"],
+      "contracts": []
+    },
+    {
+      "id": 7,
+      "name": "유재석",
+      "skills": ["CSS", "Next.js", "Vue"],
+      "year": "1",
+      "career": "유재석 - 1년차 개발자, 다양한 회사에서 근무 경험 보유",
+      "availableTime": "상시 가능",
+      "education": [],
+      "contracts": []
+    },
+    {
+      "id": 8,
+      "name": "강호동",
+      "skills": ["React", "TypeScript", "CSS", "Next.js"],
+      "year": "2",
+      "career": "강호동 - 2년차 개발자, 다양한 회사에서 근무 경험 보유",
+      "availableTime": "평일 오전",
+      "education": [],
+      "contracts": [
+        {
+          "title": "강호동 프로젝트 1",
+          "startDate": "2020-07-01",
+          "endDate": "2024-10-28",
+          "team": "디자인팀",
+          "recommendation": "추천 안함"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "이지은",
+      "skills": ["React", "Next.js", "HTML"],
+      "year": "2",
+      "career": "이지은 - 2년차 개발자, 다양한 회사에서 근무 경험 보유",
+      "availableTime": "주말 오후",
+      "education": [],
+      "contracts": []
+    },
+    {
+      "id": 10,
+      "name": "장원영",
+      "skills": ["JavaScript", "Next.js", "Vue"],
+      "year": "2",
+      "career": "장원영 - 2년차 개발자, 다양한 회사에서 근무 경험 보유",
+      "availableTime": "주말 오후",
+      "education": ["2021 튜터 활동", "2024 교육 참가"],
+      "contracts": []
+    },
+    // ... 계속해서 20명까지 구성 중 (앞에서 너무 길어 생략됨)
+    {
+        "id": 11,
+        "name": "홍길동",
+        "skills": ["HTML", "Node.js", "React", "Vue"],
+        "year": "9",
+        "career": "9년차 개발자, 다양한 회사에서 근무 경험 보유",
+        "availableTime": "평일 오전",
+        "education": ["2023 튜터 활동", "2021 교육 참가"],
+        "contracts": [
+          {
+            "title": "홍길동 프로젝트 1",
+            "startDate": "2023-01-01",
+            "endDate": "2024-10-28",
+            "team": "A팀",
+            "recommendation": "매우 우수"
+          },
+          {
+            "title": "홍길동 프로젝트 2",
+            "startDate": "2022-04-01",
+            "endDate": "2023-12-28",
+            "team": "프론트엔드팀",
+            "recommendation": "우수"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "신유진",
+        "skills": ["TypeScript", "Angular", "CSS"],
+        "year": "1",
+        "career": "신유진 - 1년차 개발자, 다양한 회사에서 근무 경험 보유",
+        "availableTime": "상시 가능",
+        "education": [],
+        "contracts": []
+      },
+      {
+        "id": 13,
+        "name": "김도현",
+        "skills": ["Vue", "JavaScript", "React"],
+        "year": "7",
+        "career": "김도현 - 7년차 개발자, 다양한 회사에서 근무 경험 보유",
+        "availableTime": "주말 오후",
+        "education": ["2020 튜터 활동"],
+        "contracts": [
+          {
+            "title": "김도현 프로젝트 1",
+            "startDate": "2020-08-01",
+            "endDate": "2023-11-28",
+            "team": "B팀",
+            "recommendation": "보통"
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "박서준",
+        "skills": ["React", "CSS", "Node.js"],
+        "year": "5",
+        "career": "박서준 - 5년차 개발자, 다양한 회사에서 근무 경험 보유",
+        "availableTime": "평일 야간",
+        "education": ["2021 튜터 활동", "2022 교육 참가"],
+        "contracts": []
+      },
+      {
+        "id": 15,
+        "name": "최지우",
+        "skills": ["HTML", "CSS", "TypeScript"],
+        "year": "4",
+        "career": "최지우 - 4년차 개발자, 다양한 회사에서 근무 경험 보유",
+        "availableTime": "상시 가능",
+        "education": [],
+        "contracts": []
+      },
+      {
+        "id": 16,
+        "name": "한석규",
+        "skills": ["React", "Next.js", "JavaScript"],
+        "year": "10",
+        "career": "한석규 - 10년차 개발자, 다양한 회사에서 근무 경험 보유",
+        "availableTime": "평일 오전",
+        "education": ["2020 튜터 활동", "2023 교육 참가"],
+        "contracts": [
+          {
+            "title": "한석규 프로젝트 1",
+            "startDate": "2021-02-01",
+            "endDate": "2024-11-28",
+            "team": "A팀",
+            "recommendation": "매우 우수"
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "윤아",
+        "skills": ["JavaScript", "Vue", "CSS"],
+        "year": "2",
+        "career": "윤아 - 2년차 개발자, 다양한 회사에서 근무 경험 보유",
+        "availableTime": "주말 오후",
+        "education": [],
+        "contracts": []
+      },
+      {
+        "id": 18,
+        "name": "차은우",
+        "skills": ["HTML", "CSS", "Java"],
+        "year": "1",
+        "career": "차은우 - 1년차 개발자, 다양한 회사에서 근무 경험 보유",
+        "availableTime": "평일 야간",
+        "education": [],
+        "contracts": []
+      },
+      {
+        "id": 19,
+        "name": "김혜수",
+        "skills": ["Angular", "TypeScript", "CSS"],
+        "year": "3",
+        "career": "김혜수 - 3년차 개발자, 다양한 회사에서 근무 경험 보유",
+        "availableTime": "평일 오전",
+        "education": ["2023 튜터 활동"],
+        "contracts": []
+      },
+      {
+        "id": 20,
+        "name": "이병헌",
+        "skills": ["React", "Node.js", "JavaScript"],
+        "year": "8",
+        "career": "이병헌 - 8년차 개발자, 다양한 회사에서 근무 경험 보유",
+        "availableTime": "상시 가능",
+        "education": ["2022 튜터 활동", "2020 교육 참가"],
+        "contracts": [
+          {
+            "title": "이병헌 프로젝트 1",
+            "startDate": "2020-03-01",
+            "endDate": "2024-11-28",
+            "team": "백엔드팀",
+            "recommendation": "우수"
+          }
+        ]
+      }
+    ]
+
+  
+  // 튜터 목록 반환
+  export function fetchTutorList() {
+    return Promise.resolve(mockTutors)
+  }
+  
+  // ID로 특정 튜터 반환
+  export function fetchTutorById(id) {
+    const tutor = mockTutors.find(t => t.id === id) || null
+    return Promise.resolve(tutor)
+  }

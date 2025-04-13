@@ -1,0 +1,36 @@
+/* src/components/Tutor/TutorList.css */
+
+/* 테이블 전체 */
+.tutor-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* 헤더 셀 */
+  .tutor-table th {
+    border-bottom: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    background-color: #f9f9f9;
+  }
+  
+  /* 본문 셀 */
+  .tutor-table td {
+    border-bottom: 1px solid #eee;
+    padding: 8px;
+  }
+  
+  /* 튜터 이름 링크 스타일 */
+  .tutor-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  .tutor-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* 검색 결과 없음 메시지 */
+  .no-result {
+    margin-top: 16px;
+    font-size: 16px;
+  }

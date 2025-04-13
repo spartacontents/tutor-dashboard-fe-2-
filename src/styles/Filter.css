@@ -1,0 +1,166 @@
+/* ✅ 필터 컴포넌트 전용 스타일 */
+
+/* 필터 패널 전체 */
+.filter-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  z-index: 10;
+}
+
+.filter-panel {
+  position: absolute;
+  top: 60px; /* 필터 버튼 바로 아래 위치 */
+  right: 0;
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* 필터를 누를 때만 필터 패널 보이기 */
+.filter-panel.hidden {
+  display: none;
+}
+
+/* 기술 스택 입력 그룹 */
+.filter-stack-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* 간격을 좁히기 */
+}
+
+/* 기술 스택 라벨 */
+.filter-stack-label {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 4px; /* 기존보다 간격 줄임 */
+}
+
+/* 기술 스택 입력창 + 버튼 가로 정렬 */
+.filter-stack-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 1px
+}
+
+/* 기술 스택 입력창 */
+.filter-stack-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 20px; /* 추가 버튼과 동일한 높이로 맞춤 */
+}
+
+/* 추가 버튼 */
+.filter-add-button {
+  background-color: #e8344e;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+}
+
+/* 선택된 태그 리스트 */
+.filter-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* 태그 박스 */
+.filter-tag {
+  background-color: #ff6c7a;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* 태그 삭제 버튼 */
+.filter-tag-remove {
+  margin-left: 4px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* 년차 필터 */
+.filter-year-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; 
+}
+
+/* 년차 필터 라벨 */
+.filter-year-label {
+  font-weight: bold;
+  font-size: 16px; /* 텍스트 크기 조정 */
+  margin-top: 20px; /* 기술 스택과의 간격 늘림 */
+  margin-bottom: 8px;
+}
+
+/* 년차 버튼 */
+.filter-year-button {
+  padding: 6px 10px;
+  margin-right: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px; /* 텍스트 크기 조정 */
+}
+
+/* 선택된 년차 버튼 */
+.filter-year-button.active {
+  background-color: #e8344e;
+  color: white;
+  border: none;
+}
+
+/* 하단 버튼 정렬 */
+.filter-footer-buttons {
+  display: flex;
+  justify-content: center; /* 초기화 버튼만 가운데 정렬 */
+  margin-top: 16px;
+}
+
+/* 적용 버튼 */
+/*.filter-apply-button {
+  background-color: #e8344e;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1;
+} */
+
+/* 초기화 버튼 */
+.filter-reset-button {
+  background-color: white;
+  color: #e8344e;
+  border: 1px solid #e8344e;
+  padding: 6px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: pointer;
+  font-size: 14px;
+}
