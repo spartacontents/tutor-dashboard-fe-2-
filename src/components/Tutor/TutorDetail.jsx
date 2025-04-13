@@ -10,9 +10,9 @@ export default function TutorDetail({ tutor }) {
       {/* 기본 정보 박스 */}
       <div className="info-box">
         <p><span>이름</span> {tutor.name}</p>
-        <p><span>기술 스택</span> {tutor.techStack.join(', ')|| '정보 없음'}</p>
+        <p><span>기술 스택</span> {tutor.skills.join(', ')|| '정보 없음'}</p>
         <p><span>경력</span> {tutor.career}</p>
-        <p><span>총 년차</span> {tutor.totalYears}년차</p>
+        <p><span>총 연차</span> {tutor.year}연차</p>
         <p><span>활동 가능 시간</span> {tutor.availableTime}</p>
 
         {/* 교육 이력은 리스트로 표시 */}

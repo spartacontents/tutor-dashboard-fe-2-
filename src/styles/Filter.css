@@ -1,29 +1,15 @@
-/* ✅ 필터 컴포넌트 전용 스타일 */
-
-/* 필터 패널 전체 */
-.filter-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: transparent;
-  z-index: 10;
-}
+/* 필터 컴포넌트 전용 스타일 */
 
 .filter-panel {
-  position: absolute;
-  top: 60px; /* 필터 버튼 바로 아래 위치 */
-  right: 0;
-  width: 300px;
+  width: 70%; /* 테이블과 동일하게 설정 */
+  margin: 0 auto 10px auto; /* 가운데 정렬 + 아래 여백 */
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 20;
-  max-height: 80vh;
-  overflow-y: auto;
+  box-sizing: border-box;
 }
+
 
 /* 필터를 누를 때만 필터 패널 보이기 */
 .filter-panel.hidden {
@@ -34,7 +20,7 @@
 .filter-stack-group {
   display: flex;
   flex-direction: column;
-  gap: 6px; /* 간격을 좁히기 */
+  gap: 0px; /* 간격을 좁히기 */
 }
 
 /* 기술 스택 라벨 */
@@ -102,22 +88,22 @@
   font-weight: bold;
 }
 
-/* 년차 필터 */
+/* 연차 필터 */
 .filter-year-group {
   display: flex;
   flex-direction: column;
   gap: 8px; 
 }
 
-/* 년차 필터 라벨 */
+/* 연차 필터 라벨 */
 .filter-year-label {
   font-weight: bold;
   font-size: 16px; /* 텍스트 크기 조정 */
   margin-top: 20px; /* 기술 스택과의 간격 늘림 */
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
-/* 년차 버튼 */
+/* 연차 버튼 */
 .filter-year-button {
   padding: 6px 10px;
   margin-right: 6px;
@@ -128,7 +114,7 @@
   font-size: 14px; /* 텍스트 크기 조정 */
 }
 
-/* 선택된 년차 버튼 */
+/* 선택된 연차 버튼 */
 .filter-year-button.active {
   background-color: #e8344e;
   color: white;
@@ -139,19 +125,9 @@
 .filter-footer-buttons {
   display: flex;
   justify-content: center; /* 초기화 버튼만 가운데 정렬 */
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
-/* 적용 버튼 */
-/*.filter-apply-button {
-  background-color: #e8344e;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  flex: 1;
-} */
 
 /* 초기화 버튼 */
 .filter-reset-button {

@@ -23,9 +23,6 @@ export default function TutorListPage() {
   // 필터링된 튜터 목록
   const [filteredTutors, setFilteredTutors] = useState([]);
 
-  // 필터 패널 열림 여부
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
-
   // 페이지네이션 상태
   const [currentPage, setCurrentPage] = useState(1);
   const tutorsPerPage = 10;
@@ -41,17 +38,17 @@ export default function TutorListPage() {
   // 필터링 처리
   useEffect(() => {
     const lowerSearch = searchTerm.toLowerCase();
-
+    // 검색어 매칭
     const filtered = tutors.filter(tutor => {
       const matchesSearch =
         !lowerSearch ||
         tutor.name.toLowerCase().includes(lowerSearch) ||
         tutor.skills.some(skill => skill.toLowerCase().includes(lowerSearch));
-
+    // 기술 스택 필터
       const matchesStack =
         stackFilter.length === 0 ||
         stackFilter.every(f => tutor.skills.map(s => s.toLowerCase()).includes(f.toLowerCase()));
-
+    // 연차 필터
       const matchesYear =
         yearFilter.length === 0 ||
         yearFilter.some(y => tutor.year >= y.range[0] && tutor.year <= y.range[1]);
@@ -106,15 +103,6 @@ export default function TutorListPage() {
     setSearchTerm(searchInput.trim());
   };
 
-  // 필터 열고 닫기
-  const toggleFilter = () => {
-    setIsFilterOpen(prev => !prev);
-  };
-
-  // 필터 적용
-  const handleFilterApply = () => {
-    setIsFilterOpen(false);
-  };
 
   // 필터 초기화
   const handleFilterReset = () => {
@@ -144,9 +132,7 @@ export default function TutorListPage() {
         <button className="search-button" onClick={handleSearchSubmit}>
           검색
         </button>
-        <button className="filter-toggle-button" onClick={toggleFilter}>
-          필터
-        </button>
+
         {selectedTutor && (
           <TutorModal
             tutor={selectedTutor}
@@ -163,17 +149,13 @@ export default function TutorListPage() {
       )}
 
       {/* 필터 패널 */}
-      {isFilterOpen && (
         <Filter
           selectedStacks={stackFilter}
           setSelectedStacks={setStackFilter}
           selectedYears={yearFilter}
           setSelectedYears={setYearFilter}
-          onApply={handleFilterApply}
           onReset={handleFilterReset}
-          onClose={() => setIsFilterOpen(false)}
         />
-      )}
 
       {/* 튜터 리스트 */}
       <TutorList 

@@ -24,9 +24,9 @@ export default function TutorDetailPage() {
         // 백엔드 응답을 프론트에 맞게 가공
         const formattedTutor = {
           name: data.name,
-          techStack: data.skills,
+          skills: data.skills,
           career: data.career,
-          totalYears: Number(data.year),
+          year: Number(data.year),
           availableTime: data.availableTime,
           education: data.education,
           contracts: data.contracts

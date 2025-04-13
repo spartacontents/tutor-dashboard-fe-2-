@@ -48,7 +48,7 @@ export default function TutorModal({ tutor, onClose }) {
             </tr>
 
             <tr>
-              <th>년차</th>
+              <th>연차</th>
               <td>{tutor.year ? `${tutor.year}년차` : '-'}</td>
             </tr>
 
