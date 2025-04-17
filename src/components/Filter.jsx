@@ -51,6 +51,7 @@ export default function Filter({
     }
   }
 
+
   return (
     <div className="filter-panel">
       {/* 기술 스택 필터 */}
@@ -94,6 +95,7 @@ export default function Filter({
           ))}
         </div>
       </div>
+
 
       {/* 초기화 버튼 */}
       <div className="filter-footer-buttons">

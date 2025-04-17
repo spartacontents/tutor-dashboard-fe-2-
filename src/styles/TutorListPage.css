@@ -69,6 +69,19 @@
   font-weight: bold;
 }
 
+/* 분야 열 너비 */
+.tutor-table th:nth-child(2),
+.tutor-table td:nth-child(2) {
+  width: 150px;
+}
+
+/* 테이블 행 hover 효과 */
+.tutor-table tbody tr:hover {
+  background-color: #fff2f4; /* 살짝 핑크빛 배경 (메인 컬러와 조화) */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
 .no-result {
   text-align: center;
   margin-top: 30px;

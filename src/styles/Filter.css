@@ -10,6 +10,19 @@
   box-sizing: border-box;
 }
 
+/* 두 필터 영역을 좌우로 정렬하기 위한 부모 박스 */
+.filter-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* 각 열의 기본 너비 설정 (반반) */
+.filter-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
 /* 필터를 누를 때만 필터 패널 보이기 */
 .filter-panel.hidden {
@@ -27,7 +40,8 @@
 .filter-stack-label {
   font-weight: bold;
   font-size: 16px;
-  margin-bottom: 4px; /* 기존보다 간격 줄임 */
+  margin-top: 8px;
+  margin-bottom: 8px; /* 기존보다 간격 줄임 */
 }
 
 /* 기술 스택 입력창 + 버튼 가로 정렬 */
@@ -92,7 +106,7 @@
 .filter-year-group {
   display: flex;
   flex-direction: column;
-  gap: 8px; 
+  gap: 6px; 
 }
 
 /* 연차 필터 라벨 */
