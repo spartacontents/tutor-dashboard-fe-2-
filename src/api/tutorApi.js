@@ -1,15 +1,15 @@
 
 // 모킹 데이터 임포트 (또는 직접 선언)
-import mockTutors from '../mock/tutors.json';
+//import mockTutors from '../mock/tutors.json';
 
 // 튜터 전체 목록 불러오기
 export async function fetchTutorList() {
-  // 👉 Mockoon 서버의 엔드포인트 호출
-  //return fetch('http://localhost:5555/newTest')
-    //.then(res => {
-      //if (!res.ok) throw new Error('Failed to fetch tutor list');
-      //return res.json();
-    //});
+  //👉 Mockoon 서버의 엔드포인트 호출
+    return fetch('http://localhost:5555/newTest')
+    .then(res => {
+      if (!res.ok) throw new Error('Failed to fetch tutor list');
+      return res.json();
+    });
 }
 
 // 특정 튜터 상세 정보 (id 기반)

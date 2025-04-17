@@ -37,6 +37,8 @@ export default function TutorListPage() {
 
   // 필터링 처리
   useEffect(() => {
+    //if (!Array.isArray(tutors)) return;
+
     const lowerSearch = searchTerm.toLowerCase();
     // 검색어 매칭
     const filtered = tutors.filter(tutor => {
